@@ -1,0 +1,17 @@
+# Runtime dependencies for main.py
+#
+# The bundled eye_trained_model.keras was saved with Keras 3.13.2.
+# Keras 3.13.x requires Python >=3.11, so create the conda env with
+# Python 3.11 or newer. Use pip for TensorFlow, per TensorFlow's Windows
+# installation guidance.
+
+tensorflow==2.21.0
+keras==3.13.2
+numpy>=1.26,<2.2
+h5py>=3.11,<4
+protobuf>=4.25,<7
+
+opencv-python>=4.10,<5
+
+PySide6>=6.7,<6.10
+PySide6-Fluent-Widgets>=1.7,<2

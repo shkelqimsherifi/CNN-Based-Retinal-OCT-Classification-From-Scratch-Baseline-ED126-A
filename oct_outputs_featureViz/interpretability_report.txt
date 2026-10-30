@@ -1,0 +1,42 @@
+
+# OCT Eye Disease Model: Interpretability & Feature Analysis Report
+
+## Generated: 2026-05-25 19:49:52.565461
+
+### Key Findings:
+
+1. **Grad-CAM Analysis**
+   - Last convolutional layer: conv2d_7
+   - Generated multi-layer activation maps for 4 correctly classified
+     and 4 misclassified samples
+   - One figure per sample, one row per conv layer (up to 6 layers)
+   - Visual outputs: gradcam_multilayer_correct/incorrect_sample*.png
+   - Implementation: true gradient-based Grad-CAM (GradientTape)
+
+2. **Feature Map Visualization**
+   - Model has 8 convolutional layers
+   - Output: feature_maps_trained_model.png
+
+3. **Feature Space Analysis (t-SNE)**
+   - Test samples: 10933 vectors in 256-D space
+   - Overall accuracy: 95.03%
+   - Balanced accuracy: 0.9506
+   - Matthews CC: 0.9250  |  Cohen's Kappa: 0.9240
+   - Correct predictions:   10,390 / 10,933
+   - Misclassified samples: 543  (red X in t-SNE right panel)
+
+4. **Per-class Metrics**
+ Class  Sensitivity  Specificity  Precision       F1
+   CNV     0.928457     0.994852   0.989474 0.957995
+   DME     0.948320     0.982399   0.864886 0.904684
+DRUSEN     0.960541     0.971630   0.749340 0.841897
+NORMAL     0.964974     0.991543   0.990216 0.977432
+
+### Output Files Generated:
+  gradcam_multilayer_correct_sample1-4.png
+  gradcam_multilayer_incorrect_sample1-4.png
+  feature_maps_trained_model.png
+  feature_space_tsne.png
+  confusion_matrix.png / .csv
+  advanced_metrics_per_class.csv
+  interpretability_report.txt

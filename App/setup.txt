@@ -1,0 +1,5 @@
+conda env create -f environment.yml
+conda activate eye_cnn_app
+python -c "import keras, tensorflow as tf; print('keras', keras.__version__); print('tensorflow', tf.__version__)"
+python inspect_model.py
+python main.py
