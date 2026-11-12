@@ -57,22 +57,22 @@ Best validation checkpoint (epoch 27): val loss 0.2953, val accuracy 0.9611, tra
 Metrics in `Outputs/` may differ slightly from the manuscript tables if they correspond to a different checkpoint or evaluation script; **use the manuscript / preprint numbers for citation**.
 
 <p align="center">
-  <img src="figures/Fig13.png" alt="Training and validation loss and accuracy trajectories" width="720">
+  <img src="Figures/Fig13.png" alt="Training and validation loss and accuracy trajectories" width="720">
 </p>
 <p align="center"><em>Fig. 13. Training and validation loss and accuracy across 30 epochs.</em></p>
 
 <p align="center">
-  <img src="figures/Fig14.png" alt="Class-wise precision, recall, and F1-score" width="720">
+  <img src="Figures/Fig14.png" alt="Class-wise precision, recall, and F1-score" width="720">
 </p>
 <p align="center"><em>Fig. 14. Class-wise precision, recall, and F1-score on the image-level held-out test set.</em></p>
 
 <p align="center">
-  <img src="figures/Fig15.png" alt="Confusion matrix" width="560">
+  <img src="Figures/Fig15.png" alt="Confusion matrix" width="560">
 </p>
 <p align="center"><em>Fig. 15. Confusion matrix of ED126-A on the image-level held-out test set.</em></p>
 
 <p align="center">
-  <img src="figures/Fig23.png" alt="One-vs-rest ROC and Precision-Recall curves" width="720">
+  <img src="Figures/Fig23.png" alt="One-vs-rest ROC and Precision-Recall curves" width="720">
 </p>
 <p align="center"><em>Fig. 23. One-vs-rest ROC and Precision–Recall curves for the four OCT classes.</em></p>
 
