@@ -1,6 +1,6 @@
 # CNN-Based Retinal OCT Classification: From-Scratch Baseline, ED126-A
 
-Companion code, evaluation outputs, manuscript figures, and desktop inference prototype for **ED126-A**, a compact four-class convolutional neural network trained from scratch on labeled retinal Optical Coherence Tomography (OCT) images.
+Companion code, evaluation outputs, manuscript Figures, and desktop inference prototype for **ED126-A**, a compact four-class convolutional neural network trained from scratch on labeled retinal Optical Coherence Tomography (OCT) images.
 
 **Preprint:** [arXiv:2611.02114](https://arxiv.org/abs/2611.02114) · [DOI: 10.48550/arXiv.2611.02114](https://doi.org/10.48550/arXiv.2611.02114)  
 **Journal manuscript:** Shkëlqim Sherifi, Festim Halili, and Merita Kasa-Halili. *CNN-Based Retinal OCT Classification: Research Gap Analysis and a From-Scratch Baseline, ED126-A.* Journal of Universal Computer Science (submitted).  
@@ -96,17 +96,17 @@ Class counts are heterogeneous (coefficient of variation ≈ 0.65). Training use
 \(w_i = N_\text{total} / (N_\text{classes} \times N_i)\).
 
 <p align="center">
-  <img src="figures/Fig1.png" alt="Training and validation image distribution" width="640">
+  <img src="Figures/Fig1.png" alt="Training and validation image distribution" width="640">
 </p>
 <p align="center"><em>Fig. 1. Distribution of training and validation images across the four retinal OCT classes.</em></p>
 
 <p align="center">
-  <img src="figures/Fig2.png" alt="Class distribution of the retinal OCT dataset" width="640">
+  <img src="Figures/Fig2.png" alt="Class distribution of the retinal OCT dataset" width="640">
 </p>
 <p align="center"><em>Fig. 2. Class distribution of the retinal OCT dataset across CNV, DME, Drusen, and Normal.</em></p>
 
 <p align="center">
-  <img src="figures/Fig3.jpg" alt="Test-set image distribution" width="640">
+  <img src="Figures/Fig3.jpg" alt="Test-set image distribution" width="640">
 </p>
 <p align="center"><em>Fig. 3. Distribution of test-set images across the four retinal OCT classes.</em></p>
 
@@ -117,17 +117,17 @@ Class counts are heterogeneous (coefficient of variation ≈ 0.65). Training use
 All inputs are standardized to `224 × 224 × 1` grayscale and rescaled to `[0, 1]`. Training-time augmentation uses horizontal flip, small rotation, translation, zoom, and contrast perturbation. Vertical flip is excluded. Validation and test images are not augmented.
 
 <p align="center">
-  <img src="figures/Fig4.png" alt="Preprocessing and augmentation pipeline" width="640">
+  <img src="Figures/Fig4.png" alt="Preprocessing and augmentation pipeline" width="640">
 </p>
 <p align="center"><em>Fig. 4. Preprocessing and training-time augmentation pipeline for retinal OCT images.</em></p>
 
 <p align="center">
-  <img src="figures/Fig5.jpeg" alt="Representative grayscale OCT images" width="720">
+  <img src="Figures/Fig5.jpeg" alt="Representative grayscale OCT images" width="720">
 </p>
 <p align="center"><em>Fig. 5. Representative grayscale OCT images from the training set across the four diagnostic classes.</em></p>
 
 <p align="center">
-  <img src="figures/Fig6.jpeg" alt="Augmented training images" width="720">
+  <img src="Figures/Fig6.jpeg" alt="Augmented training images" width="720">
 </p>
 <p align="center"><em>Fig. 6. Representative training images after stochastic data augmentation.</em></p>
 
@@ -150,24 +150,24 @@ Input: `224 × 224 × 1` grayscale. Four convolutional blocks (32 → 64 → 128
 Spatial size: 224 → 112 → 56 → 28 → 14.
 
 <p align="center">
-  <img src="figures/Fig7.png" alt="Overall ED126-A architecture" width="720">
+  <img src="Figures/Fig7.png" alt="Overall ED126-A architecture" width="720">
 </p>
 <p align="center"><em>Fig. 7. Overall architecture of the ED126-A convolutional neural network.</em></p>
 
 <p align="center">
-  <img src="figures/Fig8.png" alt="Convolutional Block 1" width="560">
-  <img src="figures/Fig9.png" alt="Convolutional Block 2" width="560">
+  <img src="Figures/Fig8.png" alt="Convolutional Block 1" width="560">
+  <img src="Figures/Fig9.png" alt="Convolutional Block 2" width="560">
 </p>
 <p align="center"><em>Fig. 8–9. Convolutional blocks 1 (32 filters) and 2 (64 filters).</em></p>
 
 <p align="center">
-  <img src="figures/Fig10.png" alt="Convolutional Block 3" width="560">
-  <img src="figures/Fig11.png" alt="Convolutional Block 4" width="560">
+  <img src="Figures/Fig10.png" alt="Convolutional Block 3" width="560">
+  <img src="Figures/Fig11.png" alt="Convolutional Block 4" width="560">
 </p>
 <p align="center"><em>Fig. 10–11. Convolutional blocks 3 (128 filters) and 4 (256 filters).</em></p>
 
 <p align="center">
-  <img src="figures/Fig12.png" alt="Classification head" width="640">
+  <img src="Figures/Fig12.png" alt="Classification head" width="640">
 </p>
 <p align="center"><em>Fig. 12. Classification head: global average pooling, dense layer, dropout, and four-class softmax.</em></p>
 
@@ -203,37 +203,37 @@ Spatial size: 224 → 112 → 56 → 28 → 14.
 - One-vs-rest ROC and Precision–Recall
 
 <p align="center">
-  <img src="figures/Fig16.png" alt="Training-set softmax confidence" width="720">
+  <img src="Figures/Fig16.png" alt="Training-set softmax confidence" width="720">
 </p>
 <p align="center"><em>Fig. 16. Top-two softmax confidence structure for the training set.</em></p>
 
 <p align="center">
-  <img src="figures/Fig17.png" alt="Validation-set softmax confidence" width="720">
+  <img src="Figures/Fig17.png" alt="Validation-set softmax confidence" width="720">
 </p>
 <p align="center"><em>Fig. 17. Top-two softmax confidence structure for the validation set.</em></p>
 
 <p align="center">
-  <img src="figures/Fig18.png" alt="Test-set softmax confidence" width="720">
+  <img src="Figures/Fig18.png" alt="Test-set softmax confidence" width="720">
 </p>
 <p align="center"><em>Fig. 18. Top-two softmax confidence structure for the image-level held-out test set.</em></p>
 
 <p align="center">
-  <img src="figures/Fig19.png" alt="t-SNE of GAP embeddings" width="720">
+  <img src="Figures/Fig19.png" alt="t-SNE of GAP embeddings" width="720">
 </p>
 <p align="center"><em>Fig. 19. t-SNE projection of the 256-dimensional GAP embeddings on the test set.</em></p>
 
 <p align="center">
-  <img src="figures/Fig20.png" alt="Grad-CAM correctly classified CNV" width="720">
+  <img src="Figures/Fig20.png" alt="Grad-CAM correctly classified CNV" width="720">
 </p>
 <p align="center"><em>Fig. 20. Grad-CAM visualizations for correctly classified CNV test images.</em></p>
 
 <p align="center">
-  <img src="figures/Fig21.png" alt="Grad-CAM misclassified CNV" width="720">
+  <img src="Figures/Fig21.png" alt="Grad-CAM misclassified CNV" width="720">
 </p>
 <p align="center"><em>Fig. 21. Grad-CAM visualizations for misclassified CNV test images.</em></p>
 
 <p align="center">
-  <img src="figures/Fig22.png" alt="Hierarchical feature-map activations" width="720">
+  <img src="Figures/Fig22.png" alt="Hierarchical feature-map activations" width="720">
 </p>
 <p align="center"><em>Fig. 22. Representative feature-map activations from the eight convolutional layers of ED126-A.</em></p>
 
@@ -244,7 +244,7 @@ Spatial size: 224 → 112 → 56 → 28 → 14.
 ```
 App/                          # Qt (PySide6) desktop inference prototype
 BaselineCNN_Architecture/     # Inference-flow diagram
-figures/                      # Manuscript figures (Fig. 1–23, A1–A3)
+Figures/                      # Manuscript Figures (Fig. 1–23, A1–A3)
 Outputs/                      # Metrics, confusion matrix, training logs
 oct_outputs_featureViz/       # Interpretability / feature-viz reports
 Testing_Eye_Disease_Model_MedicalGrid.ipynb
@@ -267,17 +267,17 @@ python main.py
 Runtime: Python ≥ 3.11, TensorFlow 2.21.0, Keras 3.13.2, PySide6. The bundled model was saved with Keras 3.13.2.
 
 <p align="center">
-  <img src="figures/FigA1.png" alt="ED126-A desktop application" width="720">
+  <img src="Figures/FigA1.png" alt="ED126-A desktop application" width="720">
 </p>
 <p align="center"><em>Fig. A1. ED126-A desktop application for local OCT inference and probability visualization.</em></p>
 
 <p align="center">
-  <img src="figures/FigA2.jpeg" alt="Desktop inference workflow" width="560">
+  <img src="Figures/FigA2.jpeg" alt="Desktop inference workflow" width="560">
 </p>
 <p align="center"><em>Fig. A2. Inference workflow of the ED126-A desktop application.</em></p>
 
 <p align="center">
-  <img src="figures/FigA3.png" alt="Model review interface" width="720">
+  <img src="Figures/FigA3.png" alt="Model review interface" width="720">
 </p>
 <p align="center"><em>Fig. A3. Model review interface showing predicted class probabilities for example OCT images.</em></p>
 
